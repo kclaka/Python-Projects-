@@ -1,0 +1,24 @@
+import random
+print('Welcome!, Whats your Name ?:')
+name = input()
+SecretNumber = random.randint(1, 20)
+print('Ok ' + name + ',I am currently thinking of a Number between 1 and 20.')
+
+#Start Random Number Generator
+for guessTaken in range(1, 7):
+    print('Take a guess.')
+    guess = int(input())
+    if guess < SecretNumber:
+        print('Your guess is too low, Try Again')
+    elif guess > SecretNumber:
+        print('You guess too high, Try Again')
+    else:
+        break
+
+if guess == SecretNumber:
+    print('Good job, ' + name + '! You Guessed the number in ' + str(guessTaken) + ' attempts')
+else:
+    print('Sorry, Maximum Attempts Reached. The Number i was thinling of was ' + str(SecretNumber) + '\n You can try again')
+    
+
+      
